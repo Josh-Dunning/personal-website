@@ -11,7 +11,7 @@
 .headBox {
 	display: flex;
 	background-color: #6B7A8F;
-	height: 80px;
+	height: 90px;
 
 }
 
@@ -38,7 +38,6 @@
 .circBox {
 	width: 50px;
 	height: 50px;
-	background-color: blue;
 	position: relative;
 	z-index: 1;
 }
@@ -47,7 +46,7 @@
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	background-color: green;
+	background-color: #F7882F;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -58,17 +57,17 @@
 	height: 28px;
 	width: 75%;
 	left: 25%;
-	background-color: red;
+	background-color: #F7882F;
 	align-items: center;
 	justify-content: flex-start;
 	position: absolute;
 	z-index: 2;
-	
+	font-weight: bold;
 }
 
 .navBox a {
 	text-decoration: none;
-	color: white;
+	color: black;
 }
 
 /* a:hover {
@@ -78,7 +77,6 @@
 .circBoxB {
 	width: 64px;
 	height: 64px;
-	background-color: yellow;
 	position: absolute;
 	z-index: 0;
 	margin-left: -7px;
@@ -88,7 +86,7 @@
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	background-color: green;
+	background-color: #F7C331;
 	display: flex;
 	justify-content: center;
 	align-items: center;
