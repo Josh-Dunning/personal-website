@@ -10,6 +10,8 @@
 
 .headBox {
 	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 	background-color: #6B7A8F;
 	height: 90px;
 	position: relative;
@@ -90,12 +92,17 @@ img {
 	color: black;
 }
 
-.navBox:hover .linkButton{
-	background-color: black;
+a .navBox {
+	text-decoration: none;
+	color: black;
 }
 
-.linkButton {
+a:hover .circ {
+	background-color: blue;
+}
 
+a:hover .navCover {
+	background-color: blue;
 }
 
 .navHide {
