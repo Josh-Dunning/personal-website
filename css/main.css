@@ -12,6 +12,8 @@
 	display: flex;
 	background-color: #6B7A8F;
 	height: 90px;
+	position: relative;
+	z-index: 3;
 
 }
 
@@ -50,6 +52,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: 4px;
+}
+
+img {
+	margin-top: 4px;
 }
 
 .navText {
@@ -63,6 +70,7 @@
 	position: absolute;
 	z-index: 2;
 	font-weight: bold;
+	/*margin-left: 20px;*/
 }
 
 .navBox a {
@@ -70,9 +78,21 @@
 	color: black;
 }
 
-/* a:hover {
+.navBox:hover .linkButton{
 	background-color: black;
-}*/
+}
+
+.linkButton {
+
+}
+
+.navHide {
+	width: 100%;
+	height: 8px;
+	background-color: #F7C331;
+	position: absolute;
+	z-index: 4;
+}
 
 .circBoxB {
 	width: 64px;
@@ -90,6 +110,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: 4px;
 }
 
 
