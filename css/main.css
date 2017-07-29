@@ -30,8 +30,9 @@
 
 .navBand {
 	background-color: #F7882F;
-	width: 100%;
+	width: 15%;
 	height: 28px;
+	right: -10px;
 	position: absolute;
 	z-index: 0;
 }
@@ -102,6 +103,10 @@ a:hover .circ {
 }
 
 a:hover .navCover {
+	background-color: blue;
+}
+
+a:hover .navBand {
 	background-color: blue;
 }
 
