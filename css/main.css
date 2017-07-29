@@ -37,7 +37,7 @@
 .navBox {
 	background-color: #F7882F;
 	height: 28px;
-	width: 160px;
+	width: 120px;
 	margin: 8px;
 	margin-right: 0px;
 	display: flex;
@@ -70,8 +70,8 @@ img {
 .navCover {
 	display: flex;
 	height: 28px;
-	width: 75%;
-	left: 25%;
+	width: 70%;
+	left: 30%;
 	background-color: #F7882F;
 	align-items: center;
 	justify-content: flex-start;
@@ -82,7 +82,7 @@ img {
 
 .navText {
 	margin-top: 4px;
-	margin-left: 4px;
+	margin-left: 6px;
 }
 
 .navBox a {
