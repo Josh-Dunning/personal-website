@@ -4,8 +4,30 @@ import './index.css';
 
 
 class Head extends React.Component {
+
+  
+
   render() {
-    return (
+
+  	function capitalize(string) {
+  	return string.charAt(0).toUpperCase() + string.slice(1);
+  	}
+
+	var navPages = ['home', 'projects', 'about', 'blog', 'github', 'contact'];
+
+	let images = {
+		home: require('./images/home.png'),
+		projects: require('./images/projects.png'),
+		about: require('./images/about.png'),
+		blog: require('./images/blog.png'),
+		github: require('./images/github.png'),
+		contact: require('./images/contact.png'),
+	}
+
+	
+
+
+    return ( 
 	  <div style={{margin: '0'}}>
 	    <div className="page">
 	      <div className="headBox">
@@ -16,101 +38,27 @@ class Head extends React.Component {
 	        <div className="navBox" style={{flex: '1', marginLeft: '0'}}>
 	          <div className="navBand"></div>  
 	        </div>
-	        <a href="index.html" style={{display: 'block'}}>
+			{navPages.map((page) =>
+			  <a 
+			  	href={ page == 'github' ? ('https://github.com/Josh-Dunning') : (page + '.html')}
+			  	style={{display: 'block'}}
+			  	target={ page == 'github' ? "_blank" : ""}>
 	          <div className="navBox">
 	            <div className="navBand"></div>          
 	            <div className="circBox">
 	              <span className="circ">
-	                <img src={require('./images/home.png')} style={{height: '25px'}}/>
+	                <img src={images[page]} style={{height: '25px'}}/>
 	              </span>
 	            </div>
 	            <span className="navCover">
-	              <div className="navText">Home</div>
+	              <div className="navText">{capitalize(page)}</div>
 	            </span>
 	            <div className="circBoxB">
 	              <div className="circB"></div>
 	            </div>
 	          </div>
 	        </a>
-	        <a href="projects.html" style={{display: 'block'}}>
-	          <div className="navBox">
-	            <div className="navBand"></div>          
-	            <div className="circBox">
-	              <span className="circ">
-	                <img src={require('./images/projects.png')} style={{height: '25px'}}/>
-	              </span>
-	            </div>
-	            <span href="projects.html" className="navCover">
-	              <div className="navText">Projects</div>
-	            </span>
-	            <div className="circBoxB">
-	              <div className="circB"></div>
-	            </div>
-	          </div>
-	        </a>
-	        <a href="about.html" style={{display: 'block'}}>
-	          <div className="navBox">
-	            <div className="navBand"></div>          
-	            <div className="circBox">
-	              <span className="circ">
-	                <img src={require('./images/about.png')} style={{height: '25px'}}/>
-	              </span>
-	            </div>
-	            <span href="about.html" className="navCover">
-	              <div className="navText">About</div>
-	            </span>
-	            <div className="circBoxB">
-	              <div className="circB"></div>
-	            </div>
-	          </div>
-	        </a>
-	        <a href="blog.html" style={{display: 'block'}}>
-	          <div className="navBox">
-	            <div className="navBand"></div>          
-	            <div className="circBox">
-	              <span className="circ">
-	                <img src={require('./images/blog.png')} style={{height: '25px'}}/>
-	              </span>
-	            </div>
-	            <span className="navCover">
-	              <div className="navText">Blog</div>
-	            </span>
-	            <div className="circBoxB">
-	              <div className="circB"></div>
-	            </div>
-	          </div>
-	        </a>
-	        <a href="https://github.com/Josh-Dunning" target="_blank" style={{display: 'block'}}>
-	          <div className="navBox">
-	            <div className="navBand"></div>          
-	            <div className="circBox">
-	              <span className="circ">
-	                <img src={require('./images/github.png')} style={{height: '25px'}}/>
-	              </span>
-	            </div>
-	            <span className="navCover">
-	              <div className="navText">Github</div>
-	            </span>
-	            <div className="circBoxB">
-	              <div className="circB"></div>
-	            </div>
-	          </div>  
-	        </a>
-	        <a href="content.html" style={{display: 'block'}}>    
-	          <div className="navBox">
-	            <div className="circBox">
-	              <span className="circ">
-	                <img src={require('./images/contact.png')} style={{height: '25px'}}/>
-	              </span>
-	            </div>
-	            <span className="navCover">
-	              <div className="navText">Contact</div>
-	            </span>
-	            <div className="circBoxB">
-	              <div className="circB"></div>
-	            </div>
-	          </div>
-	        </a>
+			)}
 	      </div>
 	    </div>
 	  </div>
