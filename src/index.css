@@ -135,4 +135,15 @@ a:hover .navBand {
 	margin-top: 4px;
 }
 
+.dropBox {
+	position: absolute;
+	display: flex;
+	justify-content: flex-end;
+	width: 73px;
+	height: 100px;
+	margin-left: 60px;
+	margin-top: -8px;
+	background-color: green;
+}
+
 

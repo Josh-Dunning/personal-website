@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
+import { Button, Transition } from 'semantic-ui-react';
 
 class Head extends React.Component {
 
-  
+	state = { visible: true }
+	toggleVisibility = () => this.setState({ visible: !this.state.visible })
 
   render() {
 
@@ -24,8 +25,7 @@ class Head extends React.Component {
 		contact: require('./images/contact.png'),
 	}
 
-	
-
+	const { visible } = this.state
 
     return ( 
 	  <div style={{margin: '0'}}>
@@ -39,10 +39,13 @@ class Head extends React.Component {
 	          <div className="navBand"></div>  
 	        </div>
 			{navPages.map((page) =>
-			  <a 
-			  	href={ page == 'github' ? ('https://github.com/Josh-Dunning') : (page + '.html')}
-			  	style={{display: 'block'}}
-			  	target={ page == 'github' ? "_blank" : ""}>
+			<div>
+			 <a 
+			  href={ page == 'github' ? ('https://github.com/Josh-Dunning') : (page + '.html')}
+			  style={{display: 'block'}}
+			  target={ page == 'github' ? "_blank" : ""}
+			  onMouseOver={this.toggleVisibility}
+			  onMouseOut={this.toggleVisibility}>
 	          <div className="navBox">
 	            <div className="navBand"></div>          
 	            <div className="circBox">
@@ -58,6 +61,10 @@ class Head extends React.Component {
 	            </div>
 	          </div>
 	        </a>
+	        <Transition visible={visible} animation='drop' duration={700}>
+	        	<div className="dropBox">AA</div>
+	        </Transition>
+	        </div>
 			)}
 	      </div>
 	    </div>
