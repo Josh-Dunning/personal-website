@@ -1,18 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { Button, Transition } from 'semantic-ui-react';
+import { Transition } from 'semantic-ui-react';
 
 class Head extends React.Component {
 
-	state = { visible: true }
-	toggleVisibility = () => this.setState({ visible: !this.state.visible })
+	constructor() {
+		super();
+		this.state = { 
+			visibility: []
+		};
+
+		for ( var i = 0; i < 6; i++) {
+			this.state.visibility.push(false),
+			this.setState({visibility: this.state.visibility })
+		}
+	}
+
+	showVisibility(i) {
+		this.state.visibility[i] = true,
+		this.setState({visibility: this.state.visibility});
+	}
+
+	capitalize(string) {
+  		return string.charAt(0).toUpperCase() + string.slice(1);
+  	}
 
   render() {
-
-  	function capitalize(string) {
-  	return string.charAt(0).toUpperCase() + string.slice(1);
-  	}
 
 	var navPages = ['home', 'projects', 'about', 'blog', 'github', 'contact'];
 
@@ -25,9 +39,10 @@ class Head extends React.Component {
 		contact: require('./images/contact.png'),
 	}
 
-	const { visible } = this.state
+	const { visibility } = this.state
 
     return ( 
+      
 	  <div style={{margin: '0'}}>
 	    <div className="page">
 	      <div className="headBox">
@@ -38,33 +53,32 @@ class Head extends React.Component {
 	        <div className="navBox" style={{flex: '1', marginLeft: '0'}}>
 	          <div className="navBand"></div>  
 	        </div>
-			{navPages.map((page) =>
-			<div>
+			{navPages.map((page, i) => (
+			<div key={page}>
 			 <a 
-			  href={ page == 'github' ? ('https://github.com/Josh-Dunning') : (page + '.html')}
+			  href={ page === 'github' ? ('https://github.com/Josh-Dunning') : (page + '.html')}
 			  style={{display: 'block'}}
-			  target={ page == 'github' ? "_blank" : ""}
-			  onMouseOver={this.toggleVisibility}
-			  onMouseOut={this.toggleVisibility}>
+			  target={ page === 'github' ? "_blank" : ""}
+			  onMouseOver={() => this.showVisibility(i)}>
 	          <div className="navBox">
 	            <div className="navBand"></div>          
 	            <div className="circBox">
 	              <span className="circ">
-	                <img src={images[page]} style={{height: '25px'}}/>
+	                <img src={images[page]} alt='missing_image' style={{height: '25px'}}/>
 	              </span>
 	            </div>
 	            <span className="navCover">
-	              <div className="navText">{capitalize(page)}</div>
+	              <div className="navText">{this.capitalize(page)}</div>
 	            </span>
 	            <div className="circBoxB">
 	              <div className="circB"></div>
 	            </div>
 	          </div>
 	        </a>
-	        <Transition visible={visible} animation='drop' duration={700}>
+	        <Transition visible={visibility[i]} animation='drop' duration={700}>
 	        	<div className="dropBox">AA</div>
 	        </Transition>
-	        </div>
+	        </div>)
 			)}
 	      </div>
 	    </div>
