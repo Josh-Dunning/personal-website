@@ -64,6 +64,9 @@ export default class Head extends React.Component {
 						<Nav name={page} image={images[page]}/>
 					</div>))}
 				</div>
+				<div className={scroll ? "body bodyLock" : "body"}>
+				A <br/> B <br/> C <br/> D
+				</div>
 			</div>
 		</div>
 		);
