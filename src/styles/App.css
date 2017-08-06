@@ -2,11 +2,11 @@
 body, html {
 	margin: 0px;
 }
+
 .page {
 	font-family: Arial;
 	font-size: 15px;
 	color: white;
-	
 }
 
 .body {
@@ -17,7 +17,7 @@ body, html {
 }
 
 .bodyLock {
-	margin-top: 27px;
+	margin-top: 96px;
 }
 
 .headBox {
@@ -29,7 +29,6 @@ body, html {
 	position: relative;
 	z-index: 3;
 	overflow: hidden;
-
 }
 
 .navBar {
@@ -42,7 +41,7 @@ body, html {
 
 .navLock {
 	position: fixed;
-	top: 0px;
+	top: 4px;
 }
 
 .hideLock {
@@ -51,7 +50,16 @@ body, html {
 	background-color: #F7C331;
 	z-index: 4;
 	position: fixed;
+	top: 4px;
+}
+
+.headLock {
+	background-color: #6B7A8F;
+	height: 4px;
+	width: 100%;
 	top: 0px;
+	position: fixed;
+	z-index: 3;
 }
 
 .navBand {

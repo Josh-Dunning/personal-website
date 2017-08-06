@@ -56,7 +56,7 @@ export default class Nav extends React.Component {
 				</div>
 			</a>
 			<a>
-				<Transition visible={visible} animation='drop' duration={700}>
+				<Transition visible={visible} animation='slide down' duration={700}>
 					<div className="dropBox">AA</div>
 				</Transition>
 			</a>

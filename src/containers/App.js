@@ -33,9 +33,9 @@ export default class Head extends React.Component {
 	  $(window).scroll(function() {
 	    var height = $(window).scrollTop();
 
-	    if(height  > 70) {
+	    if(height  > 66 && self.state.scroll === false) {
 	    	self.toggleScroll(true);
-	    } else {
+	    } else if (height  < 66 && self.state.scroll === true) {
 	    	self.toggleScroll(false);
 	    }
 		});
@@ -51,8 +51,8 @@ export default class Head extends React.Component {
 			
 		<div style={{margin: '0'}}>
 			<div className="page">
-				<div className="headBox">
-					<img style={{height: '120%', marginTop: '18px'}} src={require('../images/jname.png')} alt="Josh Dunning" />
+				<div className={scroll ? "headLock" : "headBox"}>
+					{scroll ? '' : <img style={{height: '120%', marginTop: '18px'}} src={require('../images/jname.png')} alt="Josh Dunning" />}
 				</div>
 				<div className={scroll ? "hideLock" : "navHide"}></div>
 				<div className={scroll ? "navBar navLock" : "navBar"}>
@@ -65,7 +65,9 @@ export default class Head extends React.Component {
 					</div>))}
 				</div>
 				<div className={scroll ? "body bodyLock" : "body"}>
-				A <br/> B <br/> C <br/> D
+					<div>
+						A <br/> B <br/> C <br/> D
+					</div>
 				</div>
 			</div>
 		</div>
