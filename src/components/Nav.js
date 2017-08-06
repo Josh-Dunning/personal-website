@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import '../styles/App';
 import { Transition } from 'semantic-ui-react';
 import $ from 'jquery';
 

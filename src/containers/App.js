@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Nav from './Nav';
+import '../styles/App';
+import Nav from '../components/Nav';
 
 class Head extends React.Component {
 
