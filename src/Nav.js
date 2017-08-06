@@ -10,9 +10,8 @@ export default class Nav extends React.Component {
 		super();
 		this.state = { 
 			visible: false,
-			name: 'blank',
-			image: 'blank'
 		};
+
 	}
 
 	toggleVisibility = () => this.setState({ visible: !this.state.visible })
@@ -25,6 +24,7 @@ export default class Nav extends React.Component {
   		$("a").hover(
 	    function(event) {
 	        //this.toggleVisibility
+	        console.log("AH")
 	    },
 	    function (event) {
 	        //this.toggleVisibility
@@ -35,8 +35,8 @@ export default class Nav extends React.Component {
   render() {
 
 	const { visible } = this.state
-	const { image } = this.state
-	const { name } = this.state
+	const { image } = this.props
+	const { name } = this.props
 
     return ( 
     <div>
