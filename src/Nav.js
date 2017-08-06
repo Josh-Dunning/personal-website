@@ -14,21 +14,18 @@ export default class Nav extends React.Component {
 
 	}
 
-	toggleVisibility = () => this.setState({ visible: !this.state.visible })
+	toggleVisibility() {
+	  this.setState({ visible: !this.state.visible })
+	}
 
 	capitalize(string) {
   		return string.charAt(0).toUpperCase() + string.slice(1);
   	}
 
   	componentDidMount () {
-  		$("a").hover(
-	    function(event) {
-	        //this.toggleVisibility
-	        console.log("AH")
-	    },
-	    function (event) {
-	        //this.toggleVisibility
-	    }
+		$("." + this.props.name + " a").hover(
+		  this.toggleVisibility.bind(this),
+		  this.toggleVisibility.bind(this)
  	);
   }
 
@@ -39,7 +36,7 @@ export default class Nav extends React.Component {
 	const { name } = this.props
 
     return ( 
-    <div>
+    <div className={name}>
 	 <a 
 	  href={ name === 'github' ? ('https://github.com/Josh-Dunning') : (name + '.html')}
 	  style={{display: 'block'}}
@@ -59,9 +56,11 @@ export default class Nav extends React.Component {
         </div>
       </div>
     </a>
+    <a>
     <Transition visible={visible} animation='drop' duration={700}>
     	<div className="dropBox">AA</div>
     </Transition>
+    </a>
     </div>)
   }
 }
