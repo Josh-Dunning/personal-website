@@ -1,21 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../styles/App';
+import '../styles/App.css';
 import Nav from '../components/Nav';
 
-class Head extends React.Component {
+export default class Head extends React.Component {
 
 	constructor() {
 		super();
 		this.state = { 
 			navPages: ['home', 'projects', 'about', 'blog', 'github', 'contact'],
 			images: {
-				home: require('./images/home.png'),
-				projects: require('./images/projects.png'),
-				about: require('./images/about.png'),
-				blog: require('./images/blog.png'),
-				github: require('./images/github.png'),
-				contact: require('./images/contact.png'),
+				home: require('../images/home.png'),
+				projects: require('../images/projects.png'),
+				about: require('../images/about.png'),
+				blog: require('../images/blog.png'),
+				github: require('../images/github.png'),
+				contact: require('../images/contact.png'),
 			}
 		};
 	}
@@ -30,7 +30,7 @@ class Head extends React.Component {
 		<div style={{margin: '0'}}>
 			<div className="page">
 				<div className="headBox">
-					<img style={{height: '120%', marginTop: '18px'}} src={require('./images/jname.png')} alt="Josh Dunning" />
+					<img style={{height: '120%', marginTop: '18px'}} src={require('../images/jname.png')} alt="Josh Dunning" />
 				</div>
 				<div className="navHide"></div>
 				<div className="navBar">
