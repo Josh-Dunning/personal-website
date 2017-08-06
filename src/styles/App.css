@@ -26,9 +26,22 @@ body, html {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	/*background-color: #F7C331;*/
 	height: 28px;
 	width: 100%;
+}
+
+.navLock {
+	position: fixed;
+	top: 0px;
+}
+
+.hideLock {
+	width: 100%;
+	height: 3px;
+	background-color: #F7C331;
+	z-index: 4;
+	position: fixed;
+	top: 0px;
 }
 
 .navBand {

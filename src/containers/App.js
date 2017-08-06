@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../styles/App.css';
 import Nav from '../components/Nav';
+import $ from 'jquery';
 
 export default class Head extends React.Component {
 
 	constructor() {
 		super();
 		this.state = { 
+			scroll: false,
 			navPages: ['home', 'projects', 'about', 'blog', 'github', 'contact'],
 			images: {
 				home: require('../images/home.png'),
@@ -20,10 +22,30 @@ export default class Head extends React.Component {
 		};
 	}
 
+	toggleScroll (bool) {
+		this.setState({scroll: bool})
+	}
+
+	componentDidMount () {
+
+		var self = this;
+
+	  $(window).scroll(function() {
+	    var height = $(window).scrollTop();
+
+	    if(height  > 70) {
+	    	self.toggleScroll(true);
+	    } else {
+	    	self.toggleScroll(false);
+	    }
+		});
+	}
+
 	render() {
 
 	const { navPages } = this.state
 	const { images } = this.state
+	const { scroll } = this.state
 
 		return ( 
 			
@@ -32,8 +54,8 @@ export default class Head extends React.Component {
 				<div className="headBox">
 					<img style={{height: '120%', marginTop: '18px'}} src={require('../images/jname.png')} alt="Josh Dunning" />
 				</div>
-				<div className="navHide"></div>
-				<div className="navBar">
+				<div className={scroll ? "hideLock" : "navHide"}></div>
+				<div className={scroll ? "navBar navLock" : "navBar"}>
 					<div className="navBox" style={{flex: '1', marginLeft: '0'}}>
 						<div className="navBand"></div>	
 					</div>
