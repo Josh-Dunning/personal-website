@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import '../styles/App.css';
 import Nav from '../components/Nav';
 import $ from 'jquery';
+import { Parallax, Background } from  'react-parallax';
 
 export default class Head extends React.Component {
 
@@ -67,8 +68,14 @@ export default class Head extends React.Component {
 				<div className={scroll ? "body bodyLock" : "body"} style={{display: 'flex', justifyContent: 'center'}}>
 					<div style={{flex: '1', marginLeft: '30px',  backgroundColor: '#816C5B'}}></div>
 					<div style={{flex: '2', marginRight: '30px', backgroundColor: '#C3B7AC'}}>
-						<br/><br/>
-						<img style={{width: '400px'}} src={require('../images/arduinotest.jpg')} alt="good photo"/>
+						<div style={{backgroundColor: 'blue', height: '200px', marginTop: '150px'}}>
+			        <Parallax strength={200}>
+			          <Background>
+			            <img src={require('../images/arduinotest.jpg')}/>
+			          </Background>
+			          <h1 style={{height: '200px', width: '500px', marginLeft: '14px', marginTop: '10px'}}>Arduino Projects</h1>
+			        </Parallax>
+			      </div>
 					</div>
 				</div>
 			</div>
