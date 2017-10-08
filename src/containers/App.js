@@ -66,9 +66,32 @@ export default class Head extends React.Component {
 					</div>))}
 				</div>
 				<div className={scroll ? "body bodyLock" : "body"} style={{display: 'flex', justifyContent: 'center'}}>
-					<div style={{flex: '1', marginLeft: '30px',  backgroundColor: '#816C5B'}}></div>
-					<div style={{flex: '2', marginRight: '30px', backgroundColor: '#C3B7AC'}}>
-						<div style={{backgroundColor: 'blue', height: '200px', marginTop: '150px'}}>
+					<div style={{flex: '1', marginLeft: '30px', marginTop: '38px', backgroundColor: '#816C5B'}}>
+						<div style={{height: '60px', width: '100%', backgroundColor: '#705c4c'}}>
+						</div>
+						<div style={{margin: '20px'}}>
+							<div style={{height: '100px'}}/>
+							<Parallax strength={300}>
+			          <Background>
+			            <img src={require('../images/arduinotest.jpg')}/>
+			          </Background>
+			          <h1 style={{height: '200px', width: '100%', marginLeft: '14px', marginTop: '10px'}}>Arduino Projects</h1>
+			        </Parallax>
+			        <div style={{height: '40px'}}/>
+			        <Parallax strength={-300}>
+			          <Background>
+			            <img src={require('../images/code.jpg')}/>
+			          </Background>
+			          <h1 style={{height: '200px', width: '500px', marginLeft: '14px', marginTop: '10px'}}>Java Projects</h1>
+			        </Parallax>
+						</div>
+					</div>
+					<div style={{flex: '2', marginRight: '30px', marginTop: '38px', backgroundColor: '#C3B7AC'}}>
+						<div style={{height: '60px', width: '100%', backgroundColor: '#705c4c'}}>
+						</div>
+						<div style={{margin: '20px'}}>
+							<div style={{height: '200px'}}>
+							</div>
 			        <Parallax strength={200}>
 			          <Background>
 			            <img src={require('../images/arduinotest.jpg')}/>
