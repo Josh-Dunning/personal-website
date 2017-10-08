@@ -52,7 +52,8 @@ export default class Head extends React.Component {
 		<div style={{margin: '0'}}>
 			<div className="page">
 				<div className={scroll ? "headLock" : "headBox"}>
-					{scroll ? '' : <img style={{height: '120%', marginTop: '18px'}} src={require('../images/jname.png')} alt="Josh Dunning" />}
+					{scroll ? '' : <img style={{height: '80px', marginTop: '18px'}} src={require('../images/jname.png')} alt="Josh Dunning" />}
+					
 				</div>
 				<div className={scroll ? "hideLock" : "navHide"}></div>
 				<div className={scroll ? "navBar navLock" : "navBar"}>

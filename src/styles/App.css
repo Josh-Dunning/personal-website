@@ -24,7 +24,9 @@ body, html {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	background-color: #6B7A8F;
+	background-image: url('../images/beach4.jpg');
+	background-size: 100%;
+	background-position: 0px 32%;
 	height: 70px;
 	position: relative;
 	z-index: 3;
@@ -54,7 +56,7 @@ body, html {
 }
 
 .headLock {
-	background-color: #6B7A8F;
+	background-color: #3ca2c4;
 	height: 4px;
 	width: 100%;
 	top: 0px;
