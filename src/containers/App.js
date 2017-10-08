@@ -65,8 +65,11 @@ export default class Head extends React.Component {
 					</div>))}
 				</div>
 				<div className={scroll ? "body bodyLock" : "body"} style={{display: 'flex', justifyContent: 'center'}}>
-					<div style={{width: '100%'}}> test123456 </div>
-					<div style={{width: '96%', backgroundColor: 'blue'}}>testing</div>
+					<div style={{flex: '1', marginLeft: '30px',  backgroundColor: 'white'}}></div>
+					<div style={{flex: '2', marginRight: '30px', backgroundColor: 'blue'}}>
+						<br/><br/>
+						<img style={{width: '400px'}} src={require('../images/arduinotest.jpg')} alt="good photo"/>
+					</div>
 				</div>
 			</div>
 		</div>
