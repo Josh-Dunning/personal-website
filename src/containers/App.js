@@ -52,8 +52,7 @@ export default class Head extends React.Component {
 		<div style={{margin: '0'}}>
 			<div className="page">
 				<div className={scroll ? "headLock" : "headBox"}>
-					{scroll ? '' : <img style={{height: '80px', marginTop: '18px'}} src={require('../images/jname.png')} alt="Josh Dunning" />}
-					
+					{scroll ? '' : <img style={{height: '80px', marginTop: '28px'}} src={require('../images/jname.png')} alt="Josh Dunning" />}
 				</div>
 				<div className={scroll ? "hideLock" : "navHide"}></div>
 				<div className={scroll ? "navBar navLock" : "navBar"}>
@@ -66,8 +65,8 @@ export default class Head extends React.Component {
 					</div>))}
 				</div>
 				<div className={scroll ? "body bodyLock" : "body"} style={{display: 'flex', justifyContent: 'center'}}>
-					<div style={{flex: '1', marginLeft: '30px',  backgroundColor: 'white'}}></div>
-					<div style={{flex: '2', marginRight: '30px', backgroundColor: 'blue'}}>
+					<div style={{flex: '1', marginLeft: '30px',  backgroundColor: '#816C5B'}}></div>
+					<div style={{flex: '2', marginRight: '30px', backgroundColor: '#C3B7AC'}}>
 						<br/><br/>
 						<img style={{width: '400px'}} src={require('../images/arduinotest.jpg')} alt="good photo"/>
 					</div>
