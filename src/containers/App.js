@@ -64,10 +64,9 @@ export default class Head extends React.Component {
 						<Nav name={page} image={images[page]}/>
 					</div>))}
 				</div>
-				<div className={scroll ? "body bodyLock" : "body"}>
-					<div>
-						A <br/> B <br/> C <br/> D
-					</div>
+				<div className={scroll ? "body bodyLock" : "body"} style={{display: 'flex', justifyContent: 'center'}}>
+					<div style={{width: '100%'}}> test123456 </div>
+					<div style={{width: '96%', backgroundColor: 'blue'}}>testing</div>
 				</div>
 			</div>
 		</div>
